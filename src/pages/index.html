@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="EUC-KR">
+  <title>selim0915</title>
+  <link rel="icon" href="/public/mouse.png" type="image/x-icon">
+  <link rel="stylesheet" href="../css/global.css">
+  <link rel="stylesheet" href="../css/layout.css">
+</head>
+<body>
+  <header>
+    <a href="#home" onclick="loadPage('home')">우세림의 GitHub 페이지</a>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#project" onclick="loadPage('project')">Project</a></li>
+      <li><a href="#profile" onclick="loadPage('profile')">Profile</a></li>
+    </ul>
+  </nav>
+
+  <main id="main-content"></main>
+
+  <footer>Copyright ⓒ 우세림 All rights reserved.</footer>
+</body>
+
+<script>
+  function loadPage(page) {
+    fetch(`./${page}.html`)
+      .then(res => res.text())
+      .then(html => {
+        document.getElementById('main-content').innerHTML = html;
+      })
+      .catch(err => {
+        console.log(err);
+      });
+  }
+
+  window.addEventListener('DOMContentLoaded', function () {
+    loadPage('home');
+  })
+</script>
+</html>
