@@ -1,43 +1,30 @@
 <!DOCTYPE html>
-<html>
+<html lang="ko">
 <head>
-  <meta charset="EUC-KR">
-  <title>selim0915</title>
-  <link rel="icon" href="/public/mouse.png" type="image/x-icon">
-  <link rel="stylesheet" href="/src/css/global.css">
-  <link rel="stylesheet" href="/src/css/layout.css">
+  <meta charset="UTF-8">
+  <title>우세림의 GitHub</title>
+  <link rel="icon" href="public/mouse.png" type="image/x-icon">
+  <link rel="stylesheet" href="src/css/layout.css">
+  <link rel="stylesheet" href="src/css/pages.css">
 </head>
 <body>
   <header>
-    <a href="/" onclick="loadPage('home')">우세림의 GitHub 페이지</a>
+    <a href="/">우세림의 GitHub</a>
   </header>
-
   <nav>
     <ul>
-      <li><a href="#project" onclick="loadPage('project')">Project</a></li>
-      <li><a href="#profile" onclick="loadPage('profile')">Profile</a></li>
+      <li><a href="#skills" data-page="skills">기술</a></li>
+      <li><a href="#project" data-page="project">프로젝트</a></li>
+      <li><a href="#career" data-page="career">경력</a></li>
+      <li><a href="#contact" data-page="contact">연락처</a></li>
     </ul>
   </nav>
-
   <main id="main-content"></main>
-
-  <footer>Copyright ⓒ 우세림 All rights reserved.</footer>
+  <footer>
+    <div class="container">
+      <p>&copy; 우세림 All rights reserved.</p>
+    </div>
+  </footer>
+  <script src="src/js/script.js"></script>
 </body>
-
-<script>
-  function loadPage(page) {
-    fetch(`/src/pages/${page}.html`)
-      .then(res => res.text())
-      .then(html => {
-        document.getElementById('main-content').innerHTML = html;
-      })
-      .catch(err => {
-        console.log(err);
-      });
-  }
-
-  window.addEventListener('DOMContentLoaded', function () {
-    loadPage('home');
-  })
-</script>
 </html>
