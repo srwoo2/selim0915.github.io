@@ -93,22 +93,25 @@ body.dark footer {
   color: #d1d5db;
 }
 
+/* 모드 전환용 FAB */
 #darkModeToggle {
   position: fixed;
   bottom: 40px;
   right: 50px;
   width: 50px;
   height: 50px;
-  border: 1px solid #ddd;
-  border-radius: 50%;
-  background: #ffffff;
   font-size: 14px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  border-radius: 50%;
+  border: 1px solid #ddd;
   transition: background 0.2s, transform 0.2s;
   z-index: 1000;
 }
-
+body.dark #darkModeToggle {
+  border: 1px solid #555;
+  background: #333333;
+  color: #f9f9f9;
+}
 #darkModeToggle:hover {
-  background: #f3f4f6;
-  transform: scale(1.05);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.35);
 }
