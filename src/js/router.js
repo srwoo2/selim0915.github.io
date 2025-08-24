@@ -10,34 +10,32 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 
   // 초기 로딩
-  window.loadPage('home');
-  window.setActiveNav('home');
+  window.loadPage('about');
+  window.setActiveNav('');
 });
 
 window.loadPage = function(page) {
   const fileMap = {
-    home: 'src/pages/home.html',
-    skills: 'src/pages/skills.html',
     project: 'src/pages/project.html',
     career: 'src/pages/career.html',
-    contact: 'src/pages/contact.html'
+    about: 'src/pages/about.html',
+    blog: null
   };
-  const file = fileMap[page] || fileMap.home;
+
   const main = document.getElementById('main-content');
-  main.innerHTML = '<p>로딩 중...</p>';
+  if (page === 'blog') {
+    main.innerHTML = "<p class='container page_message'>Blog 페이지는 준비 중입니다.</p>";
+    return;
+  }
+
+  const file = fileMap[page] || fileMap.about;
+  main.innerHTML = "<p class='container page_message'>로딩중</p>";
   
   fetch(file)
     .then(res => res.text())
-    .then(html => {
-      main.innerHTML = html;
-      // 섹션 스크롤 (id가 page와 동일한 경우)
-      setTimeout(() => {
-        const section = main.querySelector(`#${page}`);
-        if (section) section.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }, 100);
-    })
+    .then(html =>  main.innerHTML = html)
     .catch(() => {
-      main.innerHTML = '<p>페이지를 불러올 수 없습니다.</p>';
+      main.innerHTML = "<p class='container page_message'>페이지를 불러올 수 없습니다.</p>";
     });
 };
 

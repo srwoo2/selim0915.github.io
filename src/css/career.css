@@ -1,0 +1,76 @@
+/* career */
+.timeline {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 24px 0 0 0;
+}
+
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 3px;
+  background: linear-gradient(180deg, #2563eb 0%, #e9ecef 100%);
+  top: 0;
+  bottom: 0;
+  left: 20%;
+  margin-left: -1px;
+}
+
+.timeline-item {
+  padding: 10px 40px 10px 0;
+  position: relative;
+  background-color: inherit;
+  width: 100%;
+  display: flex;
+  margin-bottom: 36px;
+  align-items: flex-start;
+}
+
+.timeline-date {
+  width: 20%;
+  padding-right: 20px;
+  text-align: right;
+  font-weight: bold;
+  color: #2563eb;
+  position: relative;
+  z-index: 1;
+  font-size: 1.08rem;
+  letter-spacing: 0.5px;
+}
+
+.timeline-content {
+  width: 80%;
+  padding: 24px 24px 20px 24px;
+  background: #fff;
+  position: relative;
+  border-radius: 10px;
+  box-shadow: 0 3px 16px rgba(30, 64, 175, 0.10);
+  animation: fadeIn 1s;
+}
+
+.timeline-content::before {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: #fff;
+  border: 3px solid #2563eb;
+  border-radius: 50%;
+  top: 18px;
+  left: -50px;
+  z-index: 1;
+}
+
+.timeline-content h3 {
+  margin-bottom: 5px;
+  color: #2563eb;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.timeline-content h4 {
+  margin-bottom: 15px;
+  color: #6c757d;
+  font-weight: 500;
+}

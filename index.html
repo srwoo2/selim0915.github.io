@@ -2,33 +2,39 @@
 <html lang="ko">
   <head>
     <meta charset="UTF-8">
-    <title>우세림의 GitHub</title>
+    <title>Woo Blog</title>
+
     <link rel="icon" href="public/mouse.png" type="image/x-icon">
+    <link rel="stylesheet" href="src/css/about.css">
     <link rel="stylesheet" href="src/css/layout.css">
-    <link rel="stylesheet" href="src/css/pages.css">
-    <script src="src/js/script.js"></script>
+    <link rel="stylesheet" href="src/css/career.css">
+    <link rel="stylesheet" href="src/css/projects.css">
+    <script src="src/js/router.js"></script>
     <script src="src/js/ui.js"></script>
   </head>
   <body>
     <header>
-      <a href="/">우세림의 GitHub</a>
+      <a href="/">Woo Blog</a>
     </header>
+
     <nav>
       <ul>
-        <li><a href="#skills" data-page="skills">기술</a></li>
         <li><a href="#project" data-page="project">프로젝트</a></li>
         <li><a href="#career" data-page="career">경력</a></li>
-        <li><a href="#contact" data-page="contact">연락처</a></li>
+        <li><a href="#about" data-page="about">About</a></li>
+        <li><a href="#" data-page="blog">Blog</a></li>
       </ul>
     </nav>
+
     <main id="main-content"></main>
+
     <footer>
       <div class="container">
         <p>&copy; 우세림 All rights reserved.</p>
       </div>
     </footer>
 
-    <button type="button" id="darkModeToggle" class="fab"></button>
-    <button type="button" id="scrollTopBtn" class="fab"></button>
+    <button type="button" id="darkModeToggle" class="c-fab"></button>
+    <button type="button" id="scrollTopBtn" class="c-fab"></button>
   </body>
 </html>

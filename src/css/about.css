@@ -1,0 +1,210 @@
+/* header */
+.profile-header {
+  width: 100%;
+  margin-top: 100px;
+  margin-bottom: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+.profile-text p {
+  font-size: 30px;
+  line-height: 1.4;
+  font-weight: 400;
+}
+.profile-text .highlight {
+  font-weight: 700;
+  color: #2563eb;
+}
+.profile-image img {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  background: #FFFFFF80;
+}
+
+/* content */
+.profile-content {
+  width: 100%;
+  padding: 100px 0px;
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+}
+.profile-title {
+  margin-bottom: 20px;
+  font-size: 28px;
+}
+
+/* vision */
+.card-container {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.card {
+  flex: 1;
+  height: 150px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  font-weight: 400;
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* skills */
+.profile-skills {
+  width: 100%;
+  margin-top: 70px;
+  margin-bottom: 50px;
+}
+.profile-skills h3 {
+  margin-bottom: 20px;
+  font-size: 28px;
+}
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+  justify-content: space-between;
+}
+.skill-category {
+  flex: 1;
+  min-width: 220px;
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 2px 12px rgba(30, 64, 175, 0.07);
+  padding: 28px 20px 20px 20px;
+  margin-bottom: 12px;
+  transition: box-shadow 0.2s;
+}
+.skill-category:hover {
+  box-shadow: 0 6px 24px rgba(30, 64, 175, 0.13);
+}
+.skill-category h3 {
+  margin-bottom: 20px;
+  text-align: center;
+  color: #2563eb;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+.skill-item {
+  margin-bottom: 15px;
+}
+.skill-item span {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+.skill-bar {
+  height: 10px;
+  background-color: #e9ecef;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.skill-level {
+  height: 100%;
+  background: linear-gradient(90deg, #2563eb 60%, #60a5fa 100%);
+  border-radius: 5px;
+  transition: width 0.7s cubic-bezier(.4, 2, .6, 1);
+}
+
+/* contact */
+.contact-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+.contact-info,
+.contact-form {
+  flex: 1;
+  min-width: 300px;
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 2px 12px rgba(30, 64, 175, 0.07);
+  padding: 32px 24px 24px 24px;
+  margin-bottom: 12px;
+}
+.contact-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.contact-item i {
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(135deg, #2563eb 60%, #60a5fa 100%);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 15px;
+  font-size: 1.2rem;
+}
+.social-links {
+  display: flex;
+  gap: 15px;
+  margin-top: 30px;
+}
+.social-link {
+  width: 40px;
+  height: 40px;
+  background-color: #e9ecef;
+  color: #343a40;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s;
+  font-size: 1.2rem;
+}
+.social-link:hover {
+  background: linear-gradient(135deg, #2563eb 60%, #60a5fa 100%);
+  color: white;
+}
+.form-group {
+  margin-bottom: 20px;
+}
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 1rem;
+}
+.form-group textarea {
+  resize: vertical;
+}
+.btn-submit {
+  width: 100%;
+  padding: 12px;
+  font-size: 1rem;
+  cursor: pointer;
+  border: none;
+  background: linear-gradient(90deg, #2563eb 60%, #60a5fa 100%);
+  color: #fff;
+  border-radius: 6px;
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(30, 64, 175, 0.08);
+  transition: background 0.3s, box-shadow 0.3s;
+}
+.btn-submit:hover {
+  background: linear-gradient(90deg, #1e40af 60%, #2563eb 100%);
+  box-shadow: 0 4px 16px rgba(30, 64, 175, 0.16);
+}
