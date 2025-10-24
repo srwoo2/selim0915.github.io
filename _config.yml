@@ -1,0 +1,29 @@
+# Site Info
+title: "Woo Blog"
+description: "우세림의 GitHub 페이지"
+url: "https://selim0915.github.io"
+baseurl: ""
+
+# Site configurations
+gems:
+  - jekyll-paginate
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: true
+excerpt_separator: '<!-- more -->'
+sass:
+  style: compressed
+  sass_dir: _scss
+paginate: 5
+#paginate_path: '/blog/page:num'
+permalink: pretty
+version: 1.1.0
+
+
+# Plugins
+plugins:
+  - jekyll-sitemap
+  - jekyll-seo-tag
+  - jekyll-feed
+  - jekyll-gist
